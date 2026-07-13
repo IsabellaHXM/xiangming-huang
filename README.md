@@ -1,119 +1,89 @@
-# 黄香铭 · 个人简历交互网站
+# Xiangming (Isabella) Huang · Personal site
 
-一个专业、可交互的中文单页个人网站，包含：
-- 三条求职方向（互联网战略/商分、AI 产品、PE·VC）可切换筛选
-- 时间线式实习经历、可展开细节
-- 研究、项目、技能展示
-- **材料申请弹窗**（作品集 / 简历）— 支持公司/个人身份区分
+编辑刊物式个人作品集。米白纸底、单一点缀墨绿、幽灵编号、墨色反转区块。
 
----
+## 结构
 
-## 🚀 快速预览
+- [index.html](index.html) · 页面结构
+- [styles.css](styles.css) · 全站样式
+- [i18n.js](i18n.js) · 中英双语文案 + 视角变体
+- [script.js](script.js) · 交互（视角 · 折页 · 主题图 · Agent · 表单）
+- [worker.js](worker.js) · Personal Agent Cloudflare Worker
 
-在项目目录下：
+## 特性对照（对应改版需求）
+
+| 需求 | 状态 |
+|---|---|
+| 视角切换器（strategy / product / invest）+ URL 状态 | ✅ |
+| 案例按视角重排 + 高亮 | ✅ |
+| 折页式案例（Problem/Analysis/Output/Impact） | ✅ |
+| 墨色反转区块（dissertation 金句） | ✅ |
+| 幽灵编号（Hero 大 00 字） | ✅ |
+| Kinetic type（Hero 逐字浮现） | ✅ |
+| `::selection` 点缀色 | ✅ |
+| 导航下划线从左向右生长 | ✅ |
+| 伦敦实时时间 | ✅ |
+| 中英双语 + URL 语言状态 + Newsreader 英文衬线 | ✅ |
+| 研究主题图（可点击展开引语） | ✅ |
+| 创始人评估四维 | ✅ |
+| 旗韵项目外链（不复述） | ✅ |
+| Personal Agent（前端 UI + Worker 代码） | ✅ 前端就绪，Worker 待部署 |
+| 隐私脱敏（无手机号、无内部数字） | ✅ |
+| 申请表单弹窗（公司 / 个人） | ✅ |
+
+## 本地预览
 
 ```bash
 cd ~/xiangming-site
-python3 -m http.server 8080
+python3 -m http.server 8765
+# open http://localhost:8765/
 ```
 
-打开浏览器访问 http://localhost:8080
+## 部署（当前状态）
 
-或直接双击 `index.html`。
+已托管在 GitHub Pages：
+**https://isabellahxm.github.io/xiangming-huang/**
 
----
+更新流程：
 
-## ✉️ 让"申请材料"自动发到你邮箱（EmailJS 5 分钟配置）
-
-未配置前，申请按钮会调起用户本地邮件客户端（mailto 兜底）。想做到"用户点击提交 → 你邮箱自动收到申请通知"，按以下步骤：
-
-### 1. 注册 EmailJS（免费 200 封/月）
-
-访问 https://www.emailjs.com/ → 注册。
-
-### 2. 绑定你的邮箱服务
-
-- 后台 → **Email Services** → **Add New Service**
-- 选择 Outlook（你用的 xiangming.huang@outlook.com）→ 授权登录
-- 记下 **Service ID**（形如 `service_xxxx`）
-
-### 3. 创建邮件模板
-
-- 后台 → **Email Templates** → **Create New Template**
-- To Email：`{{to_email}}`
-- Subject：`【材料申请】{{identity}} · {{material}}`
-- Content（示例）：
-  ```
-  你收到一份材料申请：
-
-  材料：{{material}}
-  身份：{{identity}}
-  公司：{{company}}
-  姓名：{{name}}
-  邮箱：{{email}}
-  角色：{{role}}
-  用途：{{purpose}}
-
-  提交时间：{{submitted_at}}
-  ```
-- 保存，记下 **Template ID**（形如 `template_xxxx`）
-
-### 4. 拿到 Public Key
-
-- 后台 → **Account** → **General** → 复制 **Public Key**
-
-### 5. 填入 script.js
-
-打开 `script.js`，把顶部这三个值替换：
-
-```js
-const EMAILJS_CONFIG = {
-  publicKey:  'xxxxxxxxxxxxx',    // ← 你的 Public Key
-  serviceId:  'service_xxxxxxx',  // ← 你的 Service ID
-  templateId: 'template_xxxxxxx', // ← 你的 Template ID
-};
+```bash
+git add .
+git commit -m "your message"
+git push
 ```
 
-刷新页面，任何人提交申请后你都会立刻收到邮件。
+约 1–2 分钟后 Pages 会自动重建。
 
----
+## 待接入的两个后端（都是免费方案）
 
-## 🔒 关于"你同意后自动发材料给对方"
+### 1. Personal Agent → Cloudflare Worker
 
-纯前端做不到"你审批 → 系统自动附件发送"（会暴露作品集下载链接）。推荐的实现方式：
+前端已就绪。Worker 未部署前，Agent 会显示友好提示。部署步骤：
 
-### 方案 A（推荐 · 半自动，10 分钟落地）
+1. 安装 wrangler：`npm i -g wrangler && wrangler login`
+2. 到 Cloudflare 后台创建 Worker，粘贴 [worker.js](worker.js) 的内容
+3. Settings → Variables 添加：
+   - `ANTHROPIC_API_KEY`（Secret，从 [console.anthropic.com](https://console.anthropic.com) 拿）
+   - `ALLOWED_ORIGIN`（Text，值 `https://isabellahxm.github.io`）
+4. Storage → KV → 创建 namespace，在 Worker 里绑定为 `RATE`（用于 IP 限频）
+5. 部署后拿到 URL（形如 `https://xm-agent.xxx.workers.dev`）
+6. 打开 [script.js](script.js) 第 7 行，把 URL 填到 `AGENT_ENDPOINT`
+7. `git commit && git push`
 
-1. 按上面步骤配好 EmailJS，你会收到申请邮件
-2. 把作品集/简历上传到网盘（Google Drive / OneDrive / 坚果云），生成**分享链接**并设为「知道链接的人可查看」
-3. 收到申请邮件后，你手动回复邮件，附上链接即可
-4. （可选）用邮件模板：Outlook 的 **快速部件（Quick Parts）** 或 Gmail 的 **模板功能**，一键回复
+Anthropic 后台记得设**每日预算告警**（$1–$3 就够，Haiku 4.5 每 1M 输入 $1）。
 
-### 方案 B（全自动 · 需要一点后端）
+### 2. 申请表单 → Formspree
 
-如果你希望真正做到"点同意→自动发文件链接"，可以再花 30 分钟接入：
-- Cloudflare Workers（免费）+ 一个数据库（Cloudflare KV）
-- 你收到邮件后点击「同意」按钮 → 触发 Worker → 从 R2 拉文件链接 → 通过 Resend/Postmark 发给申请人
+未接入时用 mailto 兜底。要真正自动收信：
 
-如果需要，告诉我，我给你把 Worker 代码也写了。
+1. 到 [formspree.io](https://formspree.io) 注册（免费额度 50 封/月）
+2. 创建 Form，把 endpoint（形如 `https://formspree.io/f/xxxxxxxx`）填到 [script.js](script.js) 第 11 行 `FORMSPREE_ENDPOINT`
+3. `git commit && git push`
 
----
+## 隐私与脱敏规范
 
-## 📁 文件结构
-
-```
-xiangming-site/
-├── index.html      # 页面结构
-├── styles.css      # 全部样式（深色主题、玻璃拟态、动效）
-├── script.js       # 交互 + 表单
-└── README.md
-```
-
----
-
-## 🎨 定制建议
-
-- **头像**：如果需要在 Hero 加头像，把图片放进目录，在 `.hero-inner` 顶部加 `<img src="avatar.jpg" class="hero-avatar" />` 并加对应 CSS
-- **换主色**：改 `styles.css` 顶部 `--accent`、`--accent-2`、`--accent-3` 三个变量
-- **加板块**：仿照 `<section class="section">` 复制即可
-- **部署**：直接把三个文件丢到 GitHub Pages / Vercel / Netlify，5 秒上线
+见改版需求文档第七节。当前站点：
+- 公开页不显示手机号（仅在申请到的 PDF 里）
+- 内部指标（订单数、GMV、通过率）统一改为「千级样本、高风险场景、结构性优化」
+- 归因语气从「主导落地」改为「进入评审、提出并推动」
+- Agent 的 system prompt 也遵循同一脱敏规则

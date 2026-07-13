@@ -3,458 +3,570 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>黄香铭 · Xiangming Huang</title>
-<meta name="description" content="Xiangming Huang - Cambridge Judge MPhil. Strategy · AI Product · PE/VC. 剑桥大学商学院 MPhil。求职方向：互联网战略与商分、AI 产品、AI 方向 PE/VC 投资。" />
+<title>黄香铭 · Xiangming (Isabella) Huang</title>
+<meta name="description" content="把技术看清楚——作为战略、作为产品、作为投资。用数据讲清楚商业，用产品把判断落地。" />
+<meta property="og:title" content="Xiangming (Isabella) Huang" />
+<meta property="og:description" content="Seeing technology clearly — as strategy, as product, as investment." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#faf8f4" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- 光效背景 -->
-<div class="bg-orb bg-orb-1"></div>
-<div class="bg-orb bg-orb-2"></div>
-<div class="bg-orb bg-orb-3"></div>
-<div class="grid-overlay"></div>
-
-<!-- 顶部导航 -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand">
-      <span class="brand-mark">XM</span>
-      <span class="brand-name" data-i18n="brand.name">黄香铭</span>
-    </a>
-    <div class="nav-links">
-      <a href="#about" data-i18n="nav.about">简介</a>
-      <a href="#experience" data-i18n="nav.experience">实习经历</a>
-      <a href="#research" data-i18n="nav.research">研究</a>
-      <a href="#projects" data-i18n="nav.projects">项目</a>
-      <a href="#skills" data-i18n="nav.skills">技能</a>
-      <a href="#apply" class="nav-cta" data-i18n="nav.apply">申请材料</a>
-    </div>
-    <div class="nav-actions">
-      <button class="lang-switch" id="langSwitch" aria-label="Switch language">
-        <span class="lang-opt" data-lang="zh">中</span>
-        <span class="lang-divider">/</span>
-        <span class="lang-opt active" data-lang="en">EN</span>
-      </button>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<header class="hero" id="top">
-  <div class="hero-inner">
-    <div class="hero-tag">
-      <span class="pulse"></span>
-      <span data-i18n="hero.tag">Open to Full-Time · 2026 & 2027</span>
-    </div>
-    <h1 class="hero-name">
-      <span class="name-cn" data-i18n="hero.name.cn">黄香铭</span>
-      <span class="name-en" data-i18n-html="hero.name.en">Xiangming <em>Huang</em></span>
-    </h1>
-    <p class="hero-sub" data-i18n="hero.sub">
-      剑桥大学商学院 MPhil · 中国传媒大学 · 北京大学经济学辅修
-    </p>
-
-    <div class="hero-meta">
-      <a href="tel:+8613360106678" class="meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.35 1.84.59 2.8.72A2 2 0 0122 16.92z"/></svg>
-        +86 133 6010 6678
-      </a>
-      <a href="mailto:xiangming.huang@outlook.com" class="meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        xiangming.huang@outlook.com
-      </a>
-      <a href="https://linkedin.com/in/xiangming-huang-b30830233" target="_blank" rel="noopener" class="meta-item">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-
-    <div class="hero-scroll">
-      <span data-i18n="hero.scroll">向下探索</span>
-      <div class="scroll-line"></div>
-    </div>
-  </div>
+<!-- Top bar -->
+<header class="topbar">
+  <a href="#top" class="mark" data-i18n="mark">黄香铭</a>
+  <nav class="topnav">
+    <a href="#work" data-i18n="nav.work">案例</a>
+    <a href="#research" data-i18n="nav.research">研究</a>
+    <a href="#agent" data-i18n="nav.agent">Agent</a>
+    <a href="#request" data-i18n="nav.request">申请材料</a>
+  </nav>
+  <button class="lang" id="langBtn" aria-label="Switch language">
+    <span class="lang-opt" data-lang="zh">中</span>
+    <span class="lang-sep">·</span>
+    <span class="lang-opt active" data-lang="en">EN</span>
+  </button>
 </header>
 
-<!-- About / 自我介绍 -->
-<section id="about" class="section about-section">
-  <div class="section-head">
-    <span class="section-label" data-i18n="about.label">01 · About</span>
-    <h2 data-i18n="about.title">你好，我是香铭</h2>
-  </div>
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="ghost-num" aria-hidden="true">00</div>
+  <div class="hero-body">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span data-i18n="hero.eyebrow">Cambridge Judge · MPhil in progress</span>
+    </div>
+    <h1 class="hero-title" id="heroTitle" data-i18n="hero.title">把技术看清楚——作为战略、作为产品、作为投资。</h1>
+    <p class="hero-sub" data-i18n="hero.sub">用数据讲清楚商业，用产品把判断落地。</p>
+    <p class="hero-name">
+      <span data-i18n="hero.name">黄香铭</span>
+      <span class="hero-name-en" data-i18n="hero.name.en">Xiangming (Isabella) Huang</span>
+    </p>
 
-  <div class="about-body">
-    <div class="about-text">
-      <p class="about-lead" data-i18n="about.lead">
-        我是一名跨互联网、AI 与投资的战略与产品从业者，正在<b>剑桥大学贾奇商学院</b>攻读创新战略与组织学 MPhil。
-      </p>
-      <p data-i18n="about.p1">
-        本科毕业于中国传媒大学（专业排名第一），并在北京大学完成经济学辅修。我关注的问题一直是：<b>技术如何被组织采纳、被用户接受、并最终转化为可持续的商业价值。</b>
-      </p>
-      <p data-i18n="about.p2">
-        过去几年，我在 <b>TikTok</b> 拆解电商售后与直播治理策略、在 <b>Merck</b> 建立跨渠道价格与业绩诊断体系、在 <b>华盖资本</b> 与 <b>中信建投</b> 完成产业研究与投资标的深度分析，也在 <b>Accenture</b> 参与数字化转型咨询。同时，我基于 15 位 AI-native 创业者的一手访谈，正在完成关于 <b>AI 产品差异化叙事</b>的硕士论文。
-      </p>
-      <p data-i18n="about.p3">
-        求职方向：<b>互联网战略 / 商分、AI 产品、AI 方向 PE·VC 投资</b>。我用数据讲清楚商业，用产品把想法落地。
-      </p>
+    <!-- Lens switcher -->
+    <div class="lens">
+      <span class="lens-label" data-i18n="lens.prompt">你在招聘 —</span>
+      <div class="lens-opts" role="tablist">
+        <button class="lens-opt active" data-lens="all" data-i18n="lens.all">通用视角</button>
+        <button class="lens-opt" data-lens="strategy" data-i18n="lens.strategy">互联网战略 / 商分</button>
+        <button class="lens-opt" data-lens="product" data-i18n="lens.product">AI 产品策略</button>
+        <button class="lens-opt" data-lens="invest" data-i18n="lens.invest">投资与行业研究</button>
+      </div>
     </div>
 
-    <aside class="about-stats">
-      <div class="stat-card">
-        <div class="stat-num">5</div>
-        <div class="stat-label" data-i18n="about.stat.internships">段头部机构实习</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">15</div>
-        <div class="stat-label" data-i18n="about.stat.interviews">位 AI 创始人深访</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">3</div>
-        <div class="stat-label" data-i18n="about.stat.schools">所顶尖院校背景</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">1<sub>st</sub></div>
-        <div class="stat-label" data-i18n="about.stat.rank">本科专业排名</div>
-      </div>
-    </aside>
-  </div>
-
-  <div class="track-chips">
-    <span class="chip-label" data-i18n="about.tracks">求职方向</span>
-    <span class="chip" data-i18n="about.track.1">互联网战略 / 商分</span>
-    <span class="chip" data-i18n="about.track.2">AI 产品</span>
-    <span class="chip" data-i18n="about.track.3">PE·VC（AI 方向）</span>
-  </div>
-</section>
-
-<!-- 教育 -->
-<section class="section section-alt" id="education">
-  <div class="section-head">
-    <span class="section-label" data-i18n="edu.label">02 · Education</span>
-    <h2 data-i18n="edu.title">教育背景</h2>
-  </div>
-  <div class="edu-grid">
-    <div class="edu-card featured">
-      <div class="edu-badge" data-i18n="edu.badge">进行中</div>
-      <div class="edu-school" data-i18n="edu.cam.school">剑桥大学 · 贾奇商学院</div>
-      <div class="edu-degree" data-i18n="edu.cam.degree">MPhil in Innovation Strategy and Organisation</div>
-      <div class="edu-date">2025.10 – 2026.12 (expected)</div>
-      <div class="edu-detail" data-i18n="edu.cam.courses">相关课程：信息系统 · 统计分析 · 定量研究方法 · 战略创新</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-school" data-i18n="edu.cuc.school">中国传媒大学</div>
-      <div class="edu-degree" data-i18n="edu.cuc.degree">管理学学士 · 文化产业管理</div>
-      <div class="edu-date">2020.09 – 2024.06</div>
-      <div class="edu-detail">
-        <span class="stat"><b>3.87</b>/4.0</span>
-        <span class="stat"><b>93</b>/100</span>
-        <span class="stat" data-i18n="edu.cuc.rank">排名 <b>1</b></span>
-      </div>
-      <div class="edu-honors" data-i18n="edu.cuc.honors">校三好 · 优秀毕业生 · 央视总台奖学金 · 国家级大创基金</div>
-    </div>
-    <div class="edu-card">
-      <div class="edu-school" data-i18n="edu.pku.school">北京大学</div>
-      <div class="edu-degree" data-i18n="edu.pku.degree">经济学辅修</div>
-      <div class="edu-date">2021.09 – 2024.06</div>
-      <div class="edu-detail" data-i18n-html="edu.pku.gpa">主辅修合并 GPA WES：<b>3.81</b></div>
-      <div class="edu-honors" data-i18n="edu.pku.courses">中级微观 / 宏观 / 计量经济学 · Stata 数据分析 · 财务会计</div>
+    <div class="hero-cta">
+      <a href="#work" class="cta primary" data-i18n="cta.work">查看精选案例</a>
+      <a href="#request" class="cta" data-i18n="cta.request">申请完整简历</a>
+      <a href="mailto:xiangming.huang@outlook.com" class="cta" data-i18n="cta.contact">联系我</a>
     </div>
   </div>
 </section>
 
-<!-- 实习经历 -->
-<section class="section" id="experience">
-  <div class="section-head">
-    <span class="section-label" data-i18n="exp.label">03 · Experience</span>
-    <h2 data-i18n="exp.title">实习经历</h2>
-    <p class="section-sub" data-i18n="exp.sub">点击每段经历展开完整产出与量化成果。</p>
+<!-- 01 About -->
+<section class="chap" id="about">
+  <div class="chap-head">
+    <span class="chap-num">01</span>
+    <span class="chap-label" data-i18n="about.label">关于</span>
   </div>
-
-  <div class="timeline">
-    <!-- TikTok -->
-    <article class="exp">
-      <div class="exp-dot"></div>
-      <div class="exp-time" data-i18n="exp.tt.time">2026.05 – 至今 · 伦敦</div>
-      <header class="exp-head">
-        <div class="exp-logo">TT</div>
-        <div>
-          <h3>TikTok</h3>
-          <p data-i18n="exp.tt.role">战略分析实习生 · 商家体验与平台策略</p>
-        </div>
-        <button class="exp-toggle" aria-label="Expand">+</button>
-      </header>
-      <ul class="exp-body">
-        <li data-i18n-html="exp.tt.1"><b>《TikTok Shop UK 售后体验专项分析》</b>：拆解仅退款 / 退货退款两类逆向流程中的审核、自动通过、平台仲裁、卖家申诉与赔付链路。基于 3,000+ 仅退款订单及 4,000+ 退货退款订单，量化订单分布、通过率、争议率与赔付情况，识别高风险售后场景，推动赔付规则校验与申诉机制优化方案立项。</li>
-        <li data-i18n-html="exp.tt.2"><b>《直播拍卖治理与体验策略》</b>：围绕商家准入、发品 / 售后治理与恶意买家风控开展现状诊断，聚焦临时发品 GMV 占比快速提升、拍卖售后解决率低于大盘等问题，支持端到端治理策略设计、策略优先级判断与跨团队方案对齐。</li>
-        <li data-i18n-html="exp.tt.3"><b>《电商直播内容治理误伤专项分析》</b>：针对 Gambling / Undisclosed Marketing / Adult Body Exposure 等治理场景开展 case 抽检与根因分析，输出电商直播识别策略、专审队列、复核机制与数据权限优化建议。</li>
-      </ul>
-    </article>
-
-    <!-- Merck -->
-    <article class="exp">
-      <div class="exp-dot"></div>
-      <div class="exp-time" data-i18n="exp.merck.time">2024.11 – 2025.04 · 上海</div>
-      <header class="exp-head">
-        <div class="exp-logo">M</div>
-        <div>
-          <h3 data-i18n="exp.merck.company">Merck 默克</h3>
-          <p data-i18n="exp.merck.role">战略分析实习生 · 战略创新部门</p>
-        </div>
-        <button class="exp-toggle" aria-label="Expand">+</button>
-      </header>
-      <ul class="exp-body">
-        <li data-i18n-html="exp.merck.1"><b>《跨省渠道定价与竞品分析策略报告》</b>：通过 SQL 清洗内部数据库医院端价格，Python 爬虫采集零售端价格，建立跨省渠道可比价格数据库，结合「四同」价格政策解读价格差异成因，聚焦 Metformin 开展竞品定价策略分析。</li>
-        <li data-i18n-html="exp.merck.2"><b>《肿瘤慢病化趋势下的药房转型建议》</b>：参与 2025 西鼎会专题筹备，梳理肿瘤慢病化趋势、医保双通道政策、DTP 药房发展及连锁药房盈利模式，提出药房服务、患者管理与渠道协同优化建议。</li>
-        <li data-i18n-html="exp.merck.3"><b>《多渠道业绩诊断内部战略报告》</b>：拆解医院、零售、社区及县域多渠道表现，量化 YTD 与环比增速，识别增长驱动、结构性风险及区域差异。</li>
-      </ul>
-    </article>
-
-    <!-- 华盖 -->
-    <article class="exp">
-      <div class="exp-dot"></div>
-      <div class="exp-time" data-i18n="exp.huagai.time">2023.03 – 2023.06 · 北京</div>
-      <header class="exp-head">
-        <div class="exp-logo">HG</div>
-        <div>
-          <h3 data-i18n="exp.huagai.company">华盖资本</h3>
-          <p data-i18n="exp.huagai.role">投资分析实习生 · 科技组</p>
-        </div>
-        <button class="exp-toggle" aria-label="Expand">+</button>
-      </header>
-      <ul class="exp-body">
-        <li data-i18n-html="exp.huagai.1"><b>《新材料行业研究报告》</b>：参与 23 场实地访谈，整理 18 份会议纪要，梳理新材料产业链、下游应用、竞争格局与国产替代趋势；用 Excel + Tableau 完成市场规模测算与可视化。</li>
-        <li data-i18n-html="exp.huagai.2"><b>《新材料产业投资策略》</b>：应用「死亡谷」投资框架评估科技成果转化路径，通过 7 次专家访谈评估技术成熟度、产业化路径、市场需求与变现能力。</li>
-        <li data-i18n-html="exp.huagai.3"><b>《某聚酰亚胺企业投资研究报告》</b>：独立完成公司深度研究，构建 5 年财务预测模型，评估成长性与盈利能力。</li>
-      </ul>
-    </article>
-
-    <!-- 中信建投 -->
-    <article class="exp">
-      <div class="exp-dot"></div>
-      <div class="exp-time" data-i18n="exp.csc.time">2022.12 – 2023.02 · 北京</div>
-      <header class="exp-head">
-        <div class="exp-logo">CS</div>
-        <div>
-          <h3 data-i18n="exp.csc.company">中信建投证券</h3>
-          <p data-i18n="exp.csc.role">行业研究实习生 · 医药组</p>
-        </div>
-        <button class="exp-toggle" aria-label="Expand">+</button>
-      </header>
-      <ul class="exp-body">
-        <li data-i18n-html="exp.csc.1"><b>《CXO 行业研究报告》</b>：Wind / iFinD 数据清洗，拆解 CXO 产业链，量化评估行业规模、业务逻辑与增长潜力；四大龙头可比分析。</li>
-        <li data-i18n-html="exp.csc.2"><b>《CDMO 企业深度研究与估值对标》</b>：建立价值链分析模型 + 财务建模预测，横向估值对标评估商业模式可持续性与风险。</li>
-      </ul>
-    </article>
-
-    <!-- Accenture -->
-    <article class="exp">
-      <div class="exp-dot"></div>
-      <div class="exp-time" data-i18n="exp.acc.time">2022.08 – 2022.09 · 北京</div>
-      <header class="exp-head">
-        <div class="exp-logo">AC</div>
-        <div>
-          <h3 data-i18n="exp.acc.company">Accenture 埃森哲</h3>
-          <p data-i18n="exp.acc.role">战略咨询实习生</p>
-        </div>
-        <button class="exp-toggle" aria-label="Expand">+</button>
-      </header>
-      <ul class="exp-body">
-        <li data-i18n-html="exp.acc.1"><b>《企业数字化转型报告》</b>：PEST 分析并对比国内外企业数字化转型，提出云计算、大数据驱动的战略转型路径。</li>
-        <li data-i18n-html="exp.acc.2"><b>《农商银行数字化转型分析报告》</b>：主导案例研究，对比农商行与四大行，识别痛点并提出差异化数字转型突破口。</li>
-        <li data-i18n-html="exp.acc.3"><b>《数据库国产化交付标准白皮书》</b>：负责「实施标准与路径」章节，总结数据库上云改造三阶段与「五步十阶」。</li>
-      </ul>
-    </article>
+  <div class="chap-body about">
+    <p class="lede" data-i18n-html="about.p1" id="aboutP1">
+      我正在<em>剑桥大学贾奇商学院</em>攻读 Innovation, Strategy and Organisation MPhil。我的兴趣围绕<em>技术、组织与商业价值</em>展开。
+    </p>
+    <p data-i18n-html="about.p2" id="aboutP2">
+      过去我在 <em>TikTok</em> 做平台策略与商家体验分析，在 <em>Merck</em> 做渠道定价与业务诊断，在 <em>华盖资本</em> 和 <em>中信建投</em> 做产业研究与投资分析。
+    </p>
+    <p data-i18n-html="about.p3" id="aboutP3">
+      同时，我正在研究 <em>AI-native 创业公司</em>如何在共享大模型能力下建立差异化——这也是我 dissertation 的方向。
+    </p>
   </div>
 </section>
 
-<!-- 研究 -->
-<section class="section section-alt" id="research">
-  <div class="section-head">
-    <span class="section-label" data-i18n="res.label">04 · Research</span>
-    <h2 data-i18n="res.title">研究经历</h2>
-  </div>
-  <div class="research-grid">
-    <article class="research-card featured">
-      <div class="research-tag" data-i18n="res.mphil.tag">MPhil Dissertation</div>
-      <h3 data-i18n="res.mphil.title">AI-native 初创公司差异化策略研究</h3>
-      <div class="research-meta" data-i18n="res.mphil.meta">剑桥大学商学院 · 2026.02 – 2026.06</div>
-      <p data-i18n-html="res.mphil.p1">半结构化访谈 + 企业材料分析 + 跨案例比较。基于 <b>15 位</b> AI-native 初创公司创始人的深度访谈，覆盖中国、北美、欧洲种子轮至 A 轮前后的企业。</p>
-      <p data-i18n="res.mphil.p2">通过主题编码归纳产品定位与商业化叙事，拆解 AI 交易 / AI Agent / 智能硬件 / AI 社交等赛道的差异化逻辑，提炼在技术同质化环境下通过场景、数据、工作流、品牌与创始人背景构建竞争优势的策略路径。</p>
-    </article>
-
-    <article class="research-card">
-      <div class="research-tag" data-i18n="res.charls.tag">CHARLS 调查员</div>
-      <h3 data-i18n="res.charls.title">中国健康与养老追踪调查</h3>
-      <div class="research-meta">北京大学 · 2023.06 – 2024.06</div>
-      <p data-i18n-html="res.charls.p1"><b>《贫困补贴对中老年人多维贫困的影响》</b>：基于 CHARLS 横截面数据，A-F 方法构建多维贫困指数，STATA + Logit 模型。</p>
-      <p data-i18n-html="res.charls.p2"><b>《智慧城市建设对中老年人幸福感的影响》</b>：五年 CHARLS + 城市宏观数据平衡面板，PSM-DID 模型验证。</p>
-    </article>
-
-    <article class="research-card">
-      <div class="research-tag" data-i18n="res.nse.tag">科研助理</div>
-      <h3 data-i18n="res.nse.title">新结构经济学研究院</h3>
-      <div class="research-meta">北京大学 · 2023.04 – 2023.11</div>
-      <p data-i18n-html="res.nse.p1"><b>《贸易定量模型中发展中国家的技能溢价》</b>：以劳动报酬、就业人数与工作时间为核心构建定量模型，用 STATA 测算 EU KLEMS 数据库中 30+ 国家近 50 年的劳动技能溢价数据。</p>
-      <p data-i18n="res.nse.p2">证明基于 Heckscher-Ohlin 理论的贸易量化模型的预测偏误，引入发展中国家城乡二元结构对劳动力技能溢价的影响。</p>
-    </article>
+<!-- 02 Ink block (highest-contrast statement) -->
+<section class="ink-block">
+  <div class="ink-inner">
+    <span class="ink-eyebrow" data-i18n="ink.eyebrow">From the dissertation</span>
+    <blockquote class="ink-quote" data-i18n="ink.quote">
+      当模型能力被共同拥有，差异化就不再关于模型本身——而关于场景的深度、工作流的贴合、数据的独占，以及叙述者是否可信。
+    </blockquote>
+    <div class="ink-cite" data-i18n="ink.cite">— 摘自《AI-native 创业公司差异化策略》，剑桥大学，2026</div>
   </div>
 </section>
 
-<!-- 项目 -->
-<section class="section" id="projects">
-  <div class="section-head">
-    <span class="section-label" data-i18n="proj.label">05 · Projects</span>
-    <h2 data-i18n="proj.title">项目经历</h2>
+<!-- 03 Selected Work -->
+<section class="chap" id="work">
+  <div class="chap-head">
+    <span class="chap-num">03</span>
+    <span class="chap-label" data-i18n="work.label">精选案例</span>
   </div>
-  <div class="project-showcase">
-    <div class="project-visual">
-      <div class="project-mock">
-        <div class="mock-header">
-          <span></span><span></span><span></span>
+  <p class="chap-intro" data-i18n="work.intro">
+    三个跨行业的案例，每个都以「问题—分析—产出—影响」四段拆解。当前视角下的重点已高亮。
+  </p>
+
+  <!-- Case 1: TikTok -->
+  <article class="case" data-lenses="strategy product" data-case="tiktok">
+    <header class="case-head">
+      <div class="case-meta">
+        <span class="case-tag" data-i18n="case.tt.tag">互联网战略 · AI 产品</span>
+        <span class="case-time">2026.05 –</span>
+      </div>
+      <h3 class="case-title" data-i18n="case.tt.title">TikTok Shop UK · 商家体验与平台策略</h3>
+      <p class="case-role" data-i18n="case.tt.role">战略分析实习 · 伦敦</p>
+    </header>
+
+    <div class="fold open">
+      <button class="fold-head" aria-expanded="true">
+        <span class="fold-num">P</span>
+        <span class="fold-title" data-i18n="fold.problem">问题</span>
+        <span class="fold-toggle">−</span>
+      </button>
+      <div class="fold-body">
+        <p data-i18n="case.tt.p" data-lens-strategy="case.tt.p.strategy" data-lens-product="case.tt.p.product">
+          英国站的售后逆向流程涉及审核、自动通过、平台仲裁、卖家申诉与赔付多个环节。链路复杂、责任分散，高风险场景难以被系统性识别。
+        </p>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">A</span>
+        <span class="fold-title" data-i18n="fold.analysis">分析</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <ul>
+          <li data-i18n="case.tt.a1" data-lens-strategy="case.tt.a1.strategy" data-lens-product="case.tt.a1.product">
+            对千级订单样本做仅退款与退货退款两类流程的端到端拆解，识别高风险售后场景与规则套利路径。
+          </li>
+          <li data-i18n="case.tt.a2">
+            对直播拍卖场景做治理与体验诊断，聚焦准入、发品与售后责任分配。
+          </li>
+          <li data-i18n="case.tt.a3">
+            对电商直播内容治理场景做误伤专项分析，从策略、审核队列、复核机制、数据权限四层提出优化建议。
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">O</span>
+        <span class="fold-title" data-i18n="fold.output">产出</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <ul>
+          <li data-i18n="case.tt.o1">《售后体验专项分析》，识别高风险场景与责任归属改造空间。</li>
+          <li data-i18n="case.tt.o2">《直播拍卖治理与体验策略》建议方案，覆盖端到端治理与优先级判断。</li>
+          <li data-i18n="case.tt.o3">《内容治理误伤专项分析》，输出识别策略、专审队列与复核机制建议。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">I</span>
+        <span class="fold-title" data-i18n="fold.impact">影响</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <p data-i18n="case.tt.i" data-lens-strategy="case.tt.i.strategy" data-lens-product="case.tt.i.product">
+          相关方案进入评审流程，推动赔付规则与申诉机制的结构性优化立项。
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Case 2: Merck -->
+  <article class="case" data-lenses="strategy invest" data-case="merck">
+    <header class="case-head">
+      <div class="case-meta">
+        <span class="case-tag" data-i18n="case.mk.tag">战略商分 · 行业研究</span>
+        <span class="case-time">2024.11 – 2025.04</span>
+      </div>
+      <h3 class="case-title" data-i18n="case.mk.title">Merck · 渠道定价与业务诊断</h3>
+      <p class="case-role" data-i18n="case.mk.role">战略分析实习 · 上海</p>
+    </header>
+
+    <div class="fold open">
+      <button class="fold-head" aria-expanded="true">
+        <span class="fold-num">P</span>
+        <span class="fold-title" data-i18n="fold.problem">问题</span>
+        <span class="fold-toggle">−</span>
+      </button>
+      <div class="fold-body">
+        <p data-i18n="case.mk.p" data-lens-strategy="case.mk.p.strategy" data-lens-invest="case.mk.p.invest">
+          医院与零售端跨省价格差异复杂、口径不一，「四同」政策的落地节奏差异进一步放大了信息不对称，业务侧无法快速定位偏差成因。
+        </p>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">A</span>
+        <span class="fold-title" data-i18n="fold.analysis">分析</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <ul>
+          <li data-i18n="case.mk.a1">用 SQL 清洗医院端价格，用 Python 爬虫采集零售端价格，建立跨省可比价格数据库。</li>
+          <li data-i18n="case.mk.a2">聚焦 Metformin 做竞品定价策略分析，从政策、竞争与渠道三层解释价格差异。</li>
+          <li data-i18n="case.mk.a3">拆解医院、零售、社区、县域四类渠道，量化增长与结构性风险。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">O</span>
+        <span class="fold-title" data-i18n="fold.output">产出</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <ul>
+          <li data-i18n="case.mk.o1">《跨省渠道定价与竞品分析》策略报告。</li>
+          <li data-i18n="case.mk.o2">《多渠道业绩诊断》战略报告，识别增长驱动与区域差异。</li>
+          <li data-i18n="case.mk.o3">《肿瘤慢病化趋势下的药房转型建议》，用于西鼎会专题筹备。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">I</span>
+        <span class="fold-title" data-i18n="fold.impact">影响</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <p data-i18n="case.mk.i">支持了战略创新部门的年度渠道判断与专题会议输出。</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Case 3: Huagai -->
+  <article class="case" data-lenses="invest strategy" data-case="huagai">
+    <header class="case-head">
+      <div class="case-meta">
+        <span class="case-tag" data-i18n="case.hg.tag">投资研究 · 产业分析</span>
+        <span class="case-time">2023.03 – 2023.06</span>
+      </div>
+      <h3 class="case-title" data-i18n="case.hg.title">华盖资本 · 新材料投资研究</h3>
+      <p class="case-role" data-i18n="case.hg.role">投资分析实习 · 北京</p>
+    </header>
+
+    <div class="fold open">
+      <button class="fold-head" aria-expanded="true">
+        <span class="fold-num">P</span>
+        <span class="fold-title" data-i18n="fold.problem">问题</span>
+        <span class="fold-toggle">−</span>
+      </button>
+      <div class="fold-body">
+        <p data-i18n="case.hg.p" data-lens-invest="case.hg.p.invest">
+          新材料产业链长、技术密集、下游分散，「实验室到产业化」的死亡谷阶段是投资判断中最难识别的一段。
+        </p>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">A</span>
+        <span class="fold-title" data-i18n="fold.analysis">分析</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <ul>
+          <li data-i18n="case.hg.a1">完成 23 场实地访谈、整理 18 份纪要，系统梳理产业链、下游应用、竞争格局与国产替代趋势。</li>
+          <li data-i18n="case.hg.a2">应用「死亡谷」投资框架评估科技成果转化路径，覆盖技术成熟度、产业化路径、市场需求、变现能力四维。</li>
+          <li data-i18n="case.hg.a3">独立完成一家聚酰亚胺企业深度研究，构建 5 年财务预测模型。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">O</span>
+        <span class="fold-title" data-i18n="fold.output">产出</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <ul>
+          <li data-i18n="case.hg.o1">《新材料行业研究报告》。</li>
+          <li data-i18n="case.hg.o2">《新材料产业投资策略》，服务产学研合作方向。</li>
+          <li data-i18n="case.hg.o3">《聚酰亚胺企业投资研究报告》。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fold">
+      <button class="fold-head" aria-expanded="false">
+        <span class="fold-num">I</span>
+        <span class="fold-title" data-i18n="fold.impact">影响</span>
+        <span class="fold-toggle">+</span>
+      </button>
+      <div class="fold-body">
+        <p data-i18n="case.hg.i">研究结论用于投资标的的筛选与产业合作机会判断。</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- 04 Research -->
+<section class="chap" id="research">
+  <div class="chap-head">
+    <span class="chap-num">04</span>
+    <span class="chap-label" data-i18n="research.label">研究</span>
+  </div>
+
+  <div class="research-main">
+    <div class="research-question">
+      <span class="q-tag" data-i18n="research.qtag">研究问题</span>
+      <p data-i18n="research.q">当大模型能力逐渐共享，AI-native 创业公司如何建立差异化？</p>
+    </div>
+
+    <div class="research-meta-grid">
+      <div>
+        <h4 data-i18n="research.method.title">方法</h4>
+        <p data-i18n="research.method">半结构化访谈 15 位创始人（中国、北美、欧洲，种子轮至 A 轮），企业材料分析，主题编码，跨案例比较。</p>
+      </div>
+      <div>
+        <h4 data-i18n="research.scope.title">对象</h4>
+        <p data-i18n="research.scope">AI 交易、AI Agent、智能硬件、AI 社交。</p>
+      </div>
+      <div>
+        <h4 data-i18n="research.finding.title">核心发现</h4>
+        <p data-i18n="research.finding">差异化很少来自模型本身，更多来自场景深度、工作流、数据、品牌叙事与创始人可信度。</p>
+      </div>
+    </div>
+
+    <!-- Theme map -->
+    <div class="theme-map">
+      <div class="tm-head">
+        <span class="tm-eyebrow" data-i18n="tm.eyebrow">主题编码结构</span>
+        <span class="tm-hint" data-i18n="tm.hint">点击节点，查看脱敏后的访谈引语</span>
+      </div>
+      <div class="tm-grid" id="themeMap">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- Founder framework -->
+    <div class="framework">
+      <div class="fw-head">
+        <span class="fw-eyebrow" data-i18n="fw.eyebrow">从访谈中提炼</span>
+        <h4 data-i18n="fw.title">创始人评估四维</h4>
+      </div>
+      <div class="fw-grid">
+        <div class="fw-cell">
+          <div class="fw-name" data-i18n="fw.1.name">代谢速度</div>
+          <div class="fw-desc" data-i18n="fw.1.desc">从收到信号到做出取舍的时间。</div>
         </div>
-        <div class="mock-body">
-          <div class="mock-line" style="width:70%"></div>
-          <div class="mock-line" style="width:52%"></div>
-          <div class="mock-line" style="width:88%"></div>
-          <div class="mock-tag" data-i18n="proj.mock.1">AI 试衣间</div>
-          <div class="mock-tag" data-i18n="proj.mock.2">共创工坊</div>
-          <div class="mock-tag" data-i18n="proj.mock.3">数字衣橱</div>
+        <div class="fw-cell">
+          <div class="fw-name" data-i18n="fw.2.name">认知带宽</div>
+          <div class="fw-desc" data-i18n="fw.2.desc">同时容纳产品、组织、资本三层思考的能力。</div>
+        </div>
+        <div class="fw-cell">
+          <div class="fw-name" data-i18n="fw.3.name">承接不性感环节的意愿</div>
+          <div class="fw-desc" data-i18n="fw.3.desc">是否愿意长期做脏活、慢活、数据活。</div>
+        </div>
+        <div class="fw-cell">
+          <div class="fw-name" data-i18n="fw.4.name">诚实的边界感</div>
+          <div class="fw-desc" data-i18n="fw.4.desc">对自己不擅长的部分是否有清晰交代。</div>
         </div>
       </div>
     </div>
-    <div class="project-info">
-      <div class="project-tag" data-i18n="proj.tag">国家级大创项目 · 负责人</div>
+  </div>
+
+  <details class="research-side">
+    <summary data-i18n="research.more">其他研究经历（CHARLS · 新结构经济学）</summary>
+    <div class="research-side-body">
+      <p><b data-i18n="research.charls.title">中国健康与养老追踪调查（CHARLS）</b><span data-i18n="research.charls.body"> · 北京大学 · 2023.06 – 2024.06。两篇研究：贫困补贴对中老年多维贫困的影响；智慧城市建设对中老年幸福感的影响。</span></p>
+      <p><b data-i18n="research.nse.title">新结构经济学研究院</b><span data-i18n="research.nse.body"> · 北京大学 · 2023.04 – 2023.11。用 STATA 测算 EU KLEMS 数据库中 30+ 国家近 50 年的劳动技能溢价数据，验证 H-O 理论在城乡二元结构下的预测偏误。</span></p>
+    </div>
+  </details>
+</section>
+
+<!-- 05 Projects: Qiyun -->
+<section class="chap" id="projects">
+  <div class="chap-head">
+    <span class="chap-num">05</span>
+    <span class="chap-label" data-i18n="proj.label">项目</span>
+  </div>
+  <a class="proj-card" href="https://isabellahxm.github.io/qiyun-site/" target="_blank" rel="noopener">
+    <div class="proj-info">
+      <div class="proj-tag" data-i18n="proj.tag">国家级大创项目 · 负责人 · 2024–2025</div>
       <h3 data-i18n="proj.name">旗韵 · AI 新中式穿搭平台</h3>
-      <div class="project-date">2024.03 – 2025.06</div>
-      <p data-i18n-html="proj.p1">负责从 0 到 1 的产品设计。围绕 <b>AI 试衣间、AI 共创工坊、新中式商城、灵感社区、数字衣橱</b> 五大模块，设计「需求输入 → AI 试穿 → 风格推荐 → 内容共创 → 社区种草 → 商品定制」的完整用户旅程。</p>
-      <p data-i18n="proj.p2">使用 Claude、VSCode 及 AI 设计工具快速搭建 Demo，验证 AI 生成内容、推荐逻辑、试穿交互与商城转化链路，最终落地为「专属旗袍照生成」小程序及线上购物系统。</p>
-      <div class="project-badges">
-        <span data-i18n="proj.badge.1">1 项软件著作权</span>
-        <span data-i18n="proj.badge.2">全国高校数字艺术大赛奖项</span>
+      <p data-i18n="proj.brief">AI 新中式穿搭平台，从 0 到 1 产品设计与 Demo 落地。</p>
+      <p data-i18n="proj.output">1 项软件著作权 + 全国高校数字艺术大赛奖项。</p>
+      <span class="proj-arrow" data-i18n="proj.cta">查看项目 →</span>
+    </div>
+    <div class="proj-visual" aria-hidden="true">
+      <div class="proj-mark">旗韻</div>
+    </div>
+  </a>
+</section>
+
+<!-- 06 Personal Agent -->
+<section class="chap" id="agent">
+  <div class="chap-head">
+    <span class="chap-num">06</span>
+    <span class="chap-label" data-i18n="agent.label">和我的 Agent 聊聊</span>
+  </div>
+  <p class="chap-intro" data-i18n="agent.intro">
+    这是一个基于我脱敏后的资料构建的对话 Agent。它可以回答关于我背景、经历和研究的问题——本身也是我 AI 产品能力的展品。
+  </p>
+
+  <div class="agent">
+    <div class="agent-window" id="agentWindow">
+      <div class="agent-msg agent-msg-bot">
+        <span data-i18n="agent.welcome">你好。你可以问我关于她的背景、案例，或者 dissertation 的问题。</span>
       </div>
+    </div>
+    <div class="agent-suggests" id="agentSuggests">
+      <button class="sug" data-i18n="agent.q1">她适合什么岗位？</button>
+      <button class="sug" data-i18n="agent.q2">TikTok 的项目具体做了什么？</button>
+      <button class="sug" data-i18n="agent.q3">dissertation 的核心发现是什么？</button>
+      <button class="sug" data-i18n="agent.q4">她的技术栈有什么？</button>
+    </div>
+    <form class="agent-input" id="agentForm">
+      <input type="text" id="agentText" data-i18n-placeholder="agent.placeholder" placeholder="输入你的问题（中英文均可）" autocomplete="off" />
+      <button type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+    <div class="agent-foot">
+      <span data-i18n="agent.privacy">本对话不会被存储。护栏：仅回答与专业背景相关的问题；每 IP 每小时限 20 条。</span>
+    </div>
+
+    <div class="agent-diagram">
+      <div class="dg-node">Browser</div>
+      <div class="dg-arrow">→</div>
+      <div class="dg-node">Cloudflare Worker<br><span data-i18n="agent.dg.worker">system prompt · IP 限频</span></div>
+      <div class="dg-arrow">→</div>
+      <div class="dg-node">Claude Haiku 4.5<br><span data-i18n="agent.dg.model">脱敏语料 · 无 RAG</span></div>
     </div>
   </div>
 </section>
 
-<!-- 技能 -->
-<section class="section section-alt" id="skills">
-  <div class="section-head">
-    <span class="section-label" data-i18n="skill.label">06 · Toolkit</span>
-    <h2 data-i18n="skill.title">技能与工具</h2>
+<!-- 07 Toolkit -->
+<section class="chap" id="toolkit">
+  <div class="chap-head">
+    <span class="chap-num">07</span>
+    <span class="chap-label" data-i18n="tool.label">工具箱</span>
   </div>
-  <div class="skills-grid">
-    <div class="skill-block">
-      <h4 data-i18n="skill.ai">AI / 产品工具</h4>
-      <div class="skill-chips">
-        <span>Claude Code</span><span>Codex</span><span>VSCode</span><span>Cursor</span>
-      </div>
+  <div class="tool-grid">
+    <div class="tool-row">
+      <div class="tool-cat" data-i18n="tool.strategy">战略分析</div>
+      <div class="tool-items" data-i18n="tool.strategy.list">市场规模测算 · 竞品分析 · 政策分析 · 业务诊断</div>
     </div>
-    <div class="skill-block">
-      <h4 data-i18n="skill.data">数据分析</h4>
-      <div class="skill-bar"><label>SPSS</label><div class="bar"><div style="width:95%"></div></div><span data-i18n="skill.expert">精通</span></div>
-      <div class="skill-bar"><label>STATA</label><div class="bar"><div style="width:95%"></div></div><span data-i18n="skill.expert">精通</span></div>
-      <div class="skill-bar"><label>MS Office</label><div class="bar"><div style="width:95%"></div></div><span data-i18n="skill.expert">精通</span></div>
-      <div class="skill-bar"><label>SQL</label><div class="bar"><div style="width:78%"></div></div><span data-i18n="skill.proficient">熟练</span></div>
-      <div class="skill-bar"><label>Python</label><div class="bar"><div style="width:72%"></div></div><span data-i18n="skill.proficient">熟练</span></div>
+    <div class="tool-row">
+      <div class="tool-cat" data-i18n="tool.data">数据与建模</div>
+      <div class="tool-items">SQL · Python · Stata · SPSS · Excel · Tableau</div>
     </div>
-    <div class="skill-block">
-      <h4 data-i18n="skill.lang">语言</h4>
-      <div class="skill-chips">
-        <span data-i18n="skill.mandarin">普通话 · 母语</span>
-        <span data-i18n="skill.cantonese">粤语 · 母语</span>
-        <span>English · IELTS 7.5</span>
-        <span>TOEFL 108</span>
-        <span>CET-4 684</span>
-      </div>
+    <div class="tool-row">
+      <div class="tool-cat" data-i18n="tool.ai">AI 与原型</div>
+      <div class="tool-items">Claude Code · Cursor · Codex · VSCode</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-cat" data-i18n="tool.research">研究方法</div>
+      <div class="tool-items" data-i18n="tool.research.list">半结构化访谈 · 主题编码 · 跨案例比较 · 问卷与面板数据</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-cat" data-i18n="tool.lang">语言</div>
+      <div class="tool-items" data-i18n="tool.lang.list">普通话 · 粤语 · 英语</div>
     </div>
   </div>
 </section>
 
-<!-- 申请材料 -->
-<section class="section apply-section" id="apply">
-  <div class="section-head">
-    <span class="section-label" data-i18n="apply.label">07 · Request Materials</span>
-    <h2 data-i18n="apply.title">申请查阅作品集 / 简历</h2>
-    <p class="section-sub" data-i18n-html="apply.sub">出于隐私保护，作品集与详细简历不公开展示。填写下方表单，我会在收到申请后 <b>24 小时内</b>审核并将文件发送到你的邮箱。</p>
+<!-- 08 Now -->
+<section class="chap now" id="now">
+  <div class="chap-head">
+    <span class="chap-num">08</span>
+    <span class="chap-label" data-i18n="now.label">近况</span>
   </div>
+  <ul class="now-list">
+    <li data-i18n="now.1">目前在伦敦 TikTok Shop 做商家体验与平台策略。</li>
+    <li data-i18n="now.2">正在写 AI-native 创业公司差异化的 dissertation。</li>
+    <li data-i18n="now.3">最近在读：Ben Thompson《Aggregation Theory》系列，与 Andy Grove《High Output Management》。</li>
+  </ul>
+</section>
 
-  <div class="apply-cards">
-    <button class="apply-card" data-material="portfolio">
-      <div class="apply-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M12 12v4M10 14h4"/></svg>
-      </div>
-      <div class="apply-title" data-i18n="apply.card1.title">申请作品集 / 过往 PPT</div>
-      <div class="apply-desc" data-i18n="apply.card1.desc">包含实习产出脱敏版、研究报告样例</div>
-      <div class="apply-arrow">→</div>
+<!-- 09 Request materials -->
+<section class="chap" id="request">
+  <div class="chap-head">
+    <span class="chap-num">09</span>
+    <span class="chap-label" data-i18n="req.label">申请材料</span>
+  </div>
+  <p class="chap-intro" data-i18n="req.intro">
+    完整简历与作品集不公开展示。请填写表单，我会在 24 小时内查看并回复。
+  </p>
+  <div class="req-cards">
+    <button class="req-card" data-material="cv">
+      <div class="req-tag">01</div>
+      <div class="req-title" data-i18n="req.cv.title">完整简历（PDF）</div>
+      <div class="req-desc" data-i18n="req.cv.desc">中英双版，包含所有联系方式。</div>
+      <div class="req-arrow">→</div>
     </button>
-
-    <button class="apply-card" data-material="cv">
-      <div class="apply-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
-      </div>
-      <div class="apply-title" data-i18n="apply.card2.title">申请个人简历 PDF</div>
-      <div class="apply-desc" data-i18n="apply.card2.desc">完整版中英文简历</div>
-      <div class="apply-arrow">→</div>
+    <button class="req-card" data-material="portfolio">
+      <div class="req-tag">02</div>
+      <div class="req-title" data-i18n="req.pf.title">作品集材料</div>
+      <div class="req-desc" data-i18n="req.pf.desc">实习产出脱敏样例 + 研究报告样例。</div>
+      <div class="req-arrow">→</div>
     </button>
-  </div>
-
-  <div class="apply-note">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    <span data-i18n="apply.note">申请提交后，我会在邮箱审核。同意后系统将自动把对应材料发送到你的邮箱。</span>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="foot">
-  <div class="foot-inner">
+<!-- Colophon -->
+<footer class="colophon">
+  <div class="col-row">
     <div>
-      <div class="foot-name">黄香铭 · Xiangming Huang</div>
-      <div class="foot-motto" data-i18n="foot.motto">用数据讲清楚商业，用产品把想法落地。</div>
+      <div class="col-name">Xiangming (Isabella) Huang</div>
+      <div class="col-links">
+        <a href="mailto:xiangming.huang@outlook.com">Email</a>
+        <span>·</span>
+        <a href="https://linkedin.com/in/xiangming-huang-b30830233" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a href="https://isabellahxm.github.io/qiyun-site/" target="_blank" rel="noopener" data-i18n="col.qiyun">旗韵项目</a>
+      </div>
     </div>
-    <div class="foot-links">
-      <a href="mailto:xiangming.huang@outlook.com">Email</a>
-      <a href="https://linkedin.com/in/xiangming-huang-b30830233" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="tel:+8613360106678">Phone</a>
+    <div class="col-time">
+      <span data-i18n="col.london">Currently in London</span> ·
+      <span id="londonClock">— GMT</span>
     </div>
   </div>
-  <div class="foot-copy">© 2026 · Cambridge → London</div>
+  <div class="col-fine">
+    <span data-i18n="col.credit">本站由 Claude Code 构建 · 设计与文字均为原创 · © 2026 Xiangming Huang</span>
+  </div>
 </footer>
 
-<!-- 申请弹窗 -->
+<!-- Request modal -->
 <div class="modal" id="applyModal" aria-hidden="true">
-  <div class="modal-backdrop" data-close></div>
+  <div class="modal-bd" data-close></div>
   <div class="modal-card" role="dialog" aria-modal="true">
-    <button class="modal-close" data-close aria-label="Close">×</button>
+    <button class="modal-x" data-close aria-label="Close">×</button>
 
     <div class="modal-step" data-step="1">
-      <div class="modal-eyebrow" id="modalMaterial">申请材料</div>
-      <h3 data-i18n="modal.step1.title">你以什么身份申请？</h3>
-      <p class="modal-desc" data-i18n="modal.step1.desc">这有助于我判断合适的分享版本。</p>
+      <div class="modal-eyebrow" id="modalMaterial">Request</div>
+      <h3 data-i18n="modal.s1.title">你以什么身份申请？</h3>
+      <p class="modal-desc" data-i18n="modal.s1.desc">这有助于我判断合适的分享版本。</p>
       <div class="identity-grid">
         <button class="identity-card" data-identity="company">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 12h1M9 15h1M14 9h1M14 12h1M14 15h1"/></svg>
           <div class="identity-title" data-i18n="modal.identity.company">公司 / 团队</div>
           <div class="identity-sub" data-i18n="modal.identity.company.sub">代表公司需求</div>
         </button>
         <button class="identity-card" data-identity="personal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <div class="identity-title" data-i18n="modal.identity.personal">个人</div>
-          <div class="identity-sub" data-i18n="modal.identity.personal.sub">个人学习或交流</div>
+          <div class="identity-sub" data-i18n="modal.identity.personal.sub">个人参考或交流</div>
         </button>
       </div>
     </div>
 
     <div class="modal-step" data-step="2" hidden>
       <div class="modal-eyebrow"><a href="#" class="modal-back" data-back data-i18n="modal.back">← 返回</a></div>
-      <h3 id="stepTwoTitle" data-i18n="modal.step2.title">填写申请信息</h3>
-      <p class="modal-desc" data-i18n="modal.step2.desc">我会审核后在 24 小时内回复。</p>
+      <h3 id="stepTwoTitle" data-i18n="modal.s2.title">填写申请信息</h3>
+      <p class="modal-desc" data-i18n="modal.s2.desc">我会在 24 小时内查看。</p>
       <form class="apply-form" id="applyForm">
         <div class="field" data-field="company">
           <label data-i18n-html="form.company">公司 / 团队名称 <em>*</em></label>
@@ -474,22 +586,19 @@
         </div>
         <div class="field">
           <label data-i18n-html="form.purpose">申请用途 <em>*</em></label>
-          <textarea name="purpose" rows="3" data-i18n-placeholder="form.purpose.ph" placeholder="简要说明你希望获取材料的用途，如：某某岗位面试评估 / 项目合作参考" required></textarea>
+          <textarea name="purpose" rows="3" data-i18n-placeholder="form.purpose.ph" placeholder="简要说明用途" required></textarea>
         </div>
         <button type="submit" class="submit-btn">
           <span data-i18n="form.submit">提交申请</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
       </form>
     </div>
 
     <div class="modal-step" data-step="3" hidden>
-      <div class="success-anim">
-        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M14 27l7 7 16-16"/></svg>
-      </div>
-      <h3 data-i18n="modal.step3.title">申请已提交</h3>
-      <p class="modal-desc" data-i18n-html="modal.step3.desc">感谢你的关注。我会在收到通知后审核，并将 <b id="successMaterial">材料</b> 发送到 <b id="successEmail">你的邮箱</b>。通常 24 小时内回复。</p>
-      <button class="submit-btn" data-close data-i18n="modal.step3.ok">好的</button>
+      <div class="success-mark">✓</div>
+      <h3 data-i18n="modal.s3.title">申请已提交</h3>
+      <p class="modal-desc" data-i18n="modal.s3.desc">感谢申请。我已收到请求，并会在 24 小时内查看。</p>
+      <button class="submit-btn" data-close data-i18n="modal.s3.ok">好的</button>
     </div>
   </div>
 </div>
