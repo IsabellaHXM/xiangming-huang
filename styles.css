@@ -122,6 +122,9 @@ input,textarea{font-family:inherit;font-size:15px;color:var(--ink)}
   z-index:0;
 }
 .hero-body{position:relative;z-index:1;max-width:900px}
+/* Hero headline layout when avatar present */
+.hero-headline{display:flex;align-items:center;gap:20px}
+.hero-avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--hair);flex:0 0 96px}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
   font-size:12px;color:var(--ink-dim);
@@ -747,6 +750,7 @@ input,textarea{font-family:inherit;font-size:15px;color:var(--ink)}
   display:flex;align-items:center;justify-content:center;
   border-left:1px solid var(--hair);
 }
+.proj-logo{max-width:100%;max-height:140px;object-fit:contain;padding:18px}
 .proj-mark{
   font-family:var(--serif-zh);
   font-size:96px;
