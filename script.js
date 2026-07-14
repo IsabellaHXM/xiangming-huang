@@ -14,6 +14,7 @@ const OWNER_EMAIL = 'xiangming.huang@outlook.com';
 // ================================================================
 document.addEventListener('DOMContentLoaded', () => {
   applyLang(getLang());
+  document.documentElement.classList.remove('lang-init');
   applyLens(getLens(), false);
   bindTopbar();
   bindHeroKineticType();
