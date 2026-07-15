@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   bindLensSwitcher();
   bindFolds();
   bindLangSwitcher();
-  bindThemeMap();
   bindAgent();
   bindRequestModal();
   bindReveal();
@@ -192,113 +191,6 @@ function bindFolds(){
   });
 }
 
-// ================================================================
-// Theme map — thematic coding structure with quotes
-// ================================================================
-const THEME_MAP = {
-  zh: [
-    {
-      l1: 'A · 场景深度',
-      l2: '场景成为差异化的护城河',
-      l3: '通用模型能力越强，具体场景的深度理解反而越稀缺。',
-      quote: '「我们不是做通用 agent，我们做的是把一个具体行业里最烦的那个环节干净利落地关掉。」——AI Agent 赛道，A 轮'
-    },
-    {
-      l1: 'B · 工作流',
-      l2: '嵌入工作流的粘性',
-      l3: '不是「工具好用」，而是「离不开」——决策链、审批链、协作链的一部分。',
-      quote: '「客户不用我，他团队里就有三个人得手动做我们自动化的那件事。他不会愿意退回去。」——AI 交易，种子后'
-    },
-    {
-      l1: 'C · 数据',
-      l2: '独占数据的复利',
-      l3: '不追公开数据，去做那些只有走完一遍业务才拿得到的数据。',
-      quote: '「我们前六个月的产品价值不在于好用，而在于跑起来的每一次都在训练我们自己的模型不训练不了的东西。」——智能硬件'
-    },
-    {
-      l1: 'D · 叙事',
-      l2: '品牌与创始人叙事',
-      l3: '在同质化时代，可信度本身是稀缺资源。',
-      quote: '「投资人第五次问同一个问题，我意识到——他们买的是我这个人，不是我的 pitch。」——AI 社交，A 轮'
-    },
-    {
-      l1: 'E · 组织',
-      l2: '组织形态本身即产品',
-      l3: '小、快、密——组织效率是可感知的产品体验一部分。',
-      quote: '「我们只有 11 个人，客户能感觉到——比 100 人的团队快十倍。这本身就是我们的产品。」——AI Agent'
-    },
-    {
-      l1: 'F · 时机',
-      l2: '窗口期与代际感',
-      l3: '不是「先」，而是「刚刚好」——太早太晚都不行。',
-      quote: '「我们不是最先做的，但我们是第一批不用再说服客户为什么要用 AI 的。」——AI 交易'
-    }
-  ],
-  en: [
-    {
-      l1: 'A · Context depth',
-      l2: 'Context as moat',
-      l3: 'The stronger general model capability becomes, the scarcer deep contextual understanding gets.',
-      quote: '"We are not building a general agent. We are cleanly removing the single most painful step inside a specific industry." — AI Agent vertical, Series A'
-    },
-    {
-      l1: 'B · Workflow',
-      l2: 'Workflow stickiness',
-      l3: 'Not "useful", but "unremovable" — a component in the decision, approval, and collaboration chain.',
-      quote: '"If they stop using us, three people on the customer\'s team have to redo by hand what we automate. They will not want to go back." — AI trading, post-seed'
-    },
-    {
-      l1: 'C · Data',
-      l2: 'Compounding data exclusivity',
-      l3: 'Skip the public data. Chase the data that only exists after you actually run the business.',
-      quote: '"For the first six months our value was not usefulness — it was that every run trained something no one else could train." — Smart hardware'
-    },
-    {
-      l1: 'D · Narrative',
-      l2: 'Brand and founder narrative',
-      l3: 'In an era of homogeneity, credibility is itself a scarce resource.',
-      quote: '"When an investor asked the same question for the fifth time, I realised — they were buying me, not the pitch." — AI social, Series A'
-    },
-    {
-      l1: 'E · Organisation',
-      l2: 'Organisation itself as product',
-      l3: 'Small, fast, dense — organisational velocity is a felt part of the product experience.',
-      quote: '"We are eleven people, and the customer can feel it — ten times faster than a hundred-person team. That is the product." — AI Agent'
-    },
-    {
-      l1: 'F · Timing',
-      l2: 'Windows and generational fit',
-      l3: 'Not "first", but "just right" — too early or too late equally fails.',
-      quote: '"We were not first, but we were the first batch that no longer needed to convince customers why AI." — AI trading'
-    }
-  ]
-};
-
-function bindThemeMap(){
-  const grid = document.getElementById('themeMap');
-  if (!grid) return;
-  const render = () => {
-    const lang = getLang();
-    const data = THEME_MAP[lang];
-    grid.innerHTML = data.map((n, i) => `
-      <div class="tm-cell" data-i="${i}">
-        <div class="tm-l1">${n.l1}</div>
-        <div class="tm-l2">${n.l2}</div>
-        <div class="tm-l3">${n.l3}</div>
-        <div class="tm-quote">${n.quote}</div>
-      </div>
-    `).join('');
-    grid.querySelectorAll('.tm-cell').forEach(cell => {
-      cell.addEventListener('click', () => cell.classList.toggle('open'));
-    });
-  };
-  render();
-  document.addEventListener('langchange', render);
-}
-
-// ================================================================
-// London clock
-// ================================================================
 function bindLondonClock(){
   const el = document.getElementById('londonClock');
   if (!el) return;
@@ -323,7 +215,7 @@ function bindLondonClock(){
 // ================================================================
 function bindReveal(){
   const targets = document.querySelectorAll(
-    '.chap-head, .about > *, .ink-quote, .case, .research-question, .research-meta-grid > div, .theme-map, .framework, .proj-card, .agent, .tool-row, .now-list li, .req-card'
+    '.chap-head, .about > *, .ink-quote, .case, .research-question, .research-meta-grid > div, .framework, .proj-card, .agent, .tool-row, .req-card'
   );
   targets.forEach(el => el.classList.add('reveal'));
   const io = new IntersectionObserver(entries => {
