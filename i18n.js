@@ -9,7 +9,7 @@ const I18N_ZH = {
   'nav.agent': 'Agent',
   'nav.request': '申请材料',
 
-  'hero.eyebrow': '剑桥大学贾奇商学院 · MPhil 在读',
+  'hero.eyebrow': '<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener">剑桥大学贾奇商学院</a> · MPhil 在读',
   'hero.title': '用数据讲清楚商业，把判断做成产品。',
   'hero.sub': '战略 · AI 产品 · 投资',
   'hero.name': '黄香铭',
@@ -26,16 +26,16 @@ const I18N_ZH = {
   'cta.contact': '联系我',
 
   'about.label': '关于',
-  'about.p1': '我在<em>剑桥大学贾奇商学院</em>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。',
-  'about.p2': '目前，我在伦敦 <em>TikTok Shop</em> 做平台策略与商家体验分析。此前，我在 <em>Merck</em> 做渠道定价与业务诊断，在 <em>华盖资本</em> 和 <em>中信建投</em> 做投研分析，在 <em>Accenture</em> 做战略咨询。',
+  'about.p1': '我在<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>剑桥大学贾奇商学院</em></a>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。',
+  'about.p2': '目前，我在伦敦 <em><a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok Shop</a></em> 做平台策略与商家体验分析。此前，我在 <em><a href="https://www.merckgroup.com" target="_blank" rel="noopener">Merck</a></em> 做渠道定价与业务诊断，在 <em><a href="https://www.hillhousecap.com" target="_blank" rel="noopener">华盖资本</a></em> 和 <em><a href="https://www.citicsecurities.com" target="_blank" rel="noopener">中信建投</a></em> 做投研分析，在 <em><a href="https://www.accenture.com" target="_blank" rel="noopener">Accenture</a></em> 做战略咨询。',
   'about.p3': '这些经历横跨咨询、投资与产品策略，但做的始终是同一件事：在模糊的业务问题里建立框架，用数据形成判断，再把判断变成能落地的策略或产品。',
-  'about.p1.strategy': '我在<em>剑桥大学贾奇商学院</em>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。我关心的问题是：<em>技术如何在组织中被理解、被采纳，并最终转化为可执行的策略</em>。',
-  'about.p1.product': '我在<em>剑桥大学贾奇商学院</em>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。我关心的问题是：<em>在共享大模型能力下，AI 产品如何建立差异化并跑到 PMF</em>。',
-  'about.p1.invest': '我在<em>剑桥大学贾奇商学院</em>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。我关心的问题是：<em>技术、组织与市场三者的耦合关系，如何决定一家公司值不值得投</em>。',
+  'about.p1.strategy': '我在<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>剑桥大学贾奇商学院</em></a>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。我关心的问题是：<em>技术如何在组织中被理解、被采纳，并最终转化为可执行的策略</em>。',
+  'about.p1.product': '我在<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>剑桥大学贾奇商学院</em></a>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。我关心的问题是：<em>在共享大模型能力下，AI 产品如何建立差异化并跑到 PMF</em>。',
+  'about.p1.invest': '我在<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>剑桥大学贾奇商学院</em></a>攻读 Innovation, Strategy and Organisation MPhil，研究方向是信息系统。我关心的问题是：<em>技术、组织与市场三者的耦合关系，如何决定一家公司值不值得投</em>。',
 
   'ink.eyebrow': '摘自 dissertation',
   'ink.quote': '当模型能力被共同拥有，差异化就不再关于模型本身——而关于场景的深度、工作流的贴合、数据的独占，以及叙述者是否可信。',
-  'ink.cite': '——《AI-native 创业公司差异化策略》，剑桥大学，2026',
+  'ink.cite': '——《AI-native 创业公司差异化策略》，<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener">剑桥大学</a>，2026',
 
   'work.label': '精选案例',
   'work.intro': '三个跨行业的案例，每个都以「问题 — 分析 — 产出 — 影响」四段拆解。当前视角下的重点已高亮。',
@@ -200,7 +200,7 @@ const I18N_EN = {
   'nav.agent': 'Agent',
   'nav.request': 'Request',
 
-  'hero.eyebrow': 'Cambridge Judge · MPhil in progress',
+  'hero.eyebrow': '<a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener">Cambridge Judge</a> · MPhil in progress',
   'hero.title': 'Make business legible with data. Turn judgment into product.',
   'hero.sub': 'Strategy · AI Product · Investment',
   'hero.name': 'Xiangming Huang',
@@ -217,16 +217,16 @@ const I18N_EN = {
   'cta.contact': 'Get in touch',
 
   'about.label': 'About',
-  'about.p1': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <em>Cambridge Judge Business School</em>, with a research focus on information systems.',
-  'about.p2': 'Currently, I work on platform strategy and seller-experience analytics at <em>TikTok Shop</em> in London. Previously, I worked on channel pricing and business diagnostics at <em>Merck</em>, investment research at <em>Huagai Capital</em> and <em>China Securities</em>, and strategy consulting at <em>Accenture</em>.',
+  'about.p1': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>Cambridge Judge Business School</em></a>, with a research focus on information systems.',
+  'about.p2': 'Currently, I work on platform strategy and seller-experience analytics at <em><a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok Shop</a></em> in London. Previously, I worked on channel pricing and business diagnostics at <em><a href="https://www.merckgroup.com" target="_blank" rel="noopener">Merck</a></em>, investment research at <em><a href="https://www.hillhousecap.com" target="_blank" rel="noopener">Huagai Capital</a></em> and <em><a href="https://www.citicsecurities.com" target="_blank" rel="noopener">China Securities</a></em>, and strategy consulting at <em><a href="https://www.accenture.com" target="_blank" rel="noopener">Accenture</a></em>.',
   'about.p3': 'Across consulting, investment and e-commerce, the discipline is the same: frame an ambiguous business problem, build the analysis, form a judgment from data — then turn that judgment into a strategy or a product that ships.',
-  'about.p1.strategy': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <em>Cambridge Judge Business School</em>, with a research focus on information systems. My core question: <em>how technology gets understood inside organisations, adopted, and eventually turned into an executable strategy</em>.',
-  'about.p1.product': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <em>Cambridge Judge Business School</em>, with a research focus on information systems. My core question: <em>under shared foundation-model capability, how does an AI product build differentiation and reach PMF</em>.',
-  'about.p1.invest': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <em>Cambridge Judge Business School</em>, with a research focus on information systems. My core question: <em>how the coupling of technology, organisation, and market decides whether a company is worth backing</em>.',
+  'about.p1.strategy': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>Cambridge Judge Business School</em></a>, with a research focus on information systems. My core question: <em>how technology gets understood inside organisations, adopted, and eventually turned into an executable strategy</em>.',
+  'about.p1.product': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>Cambridge Judge Business School</em></a>, with a research focus on information systems. My core question: <em>under shared foundation-model capability, how does an AI product build differentiation and reach PMF</em>.',
+  'about.p1.invest': 'I am pursuing an MPhil in Innovation, Strategy and Organisation at <a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener"><em>Cambridge Judge Business School</em></a>, with a research focus on information systems. My core question: <em>how the coupling of technology, organisation, and market decides whether a company is worth backing</em>.',
 
   'ink.eyebrow': 'From the dissertation',
   'ink.quote': 'When model capability is shared, differentiation is no longer about the model — it is about depth of context, fit of workflow, exclusivity of data, and the credibility of the person telling the story.',
-  'ink.cite': '— From "Differentiation Strategies of AI-native Startups", Cambridge, 2026',
+  'ink.cite': '— From "Differentiation Strategies of AI-native Startups", <a href="https://www.jbs.cam.ac.uk" target="_blank" rel="noopener">Cambridge</a>, 2026',
 
   'work.label': 'Selected Work',
   'work.intro': 'Three case studies across industries, each unpacked in four folds: Problem — Analysis — Output — Impact. The lens you selected has highlighted what matters most.',
