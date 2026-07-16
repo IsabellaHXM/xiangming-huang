@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
   bindRequestModal();
   bindReveal();
   bindLondonClock();
+  bindProgress();
+  bindScrollspy();
+  bindSealTop();
+  bindTilt();
+  bindCoffee();
+  bindCountUp();
 });
 
 // ================================================================
@@ -46,18 +52,18 @@ function bindHeroKineticType(){
 
   const render = () => {
     const text = el.textContent.trim();
-    // split by CJK char or space-word
+    // split by CJK char or space-word; '\n' in the dict forces a line break
     const isCJK = /[一-鿿]/.test(text);
-    let units;
-    if (isCJK){
-      units = text.split('').map(c => `<span class="word">${c}</span>`);
-    } else {
-      units = text.split(/(\s+)/).map(part => {
+    const lines = text.split(/\n+/).map(s => s.trim()).filter(Boolean);
+    el.innerHTML = lines.map(line => {
+      if (isCJK){
+        return line.split('').map(c => `<span class="word">${c}</span>`).join('');
+      }
+      return line.split(/(\s+)/).map(part => {
         if (/^\s+$/.test(part)) return part;
         return `<span class="word">${part}</span>`;
-      });
-    }
-    el.innerHTML = units.join('');
+      }).join('');
+    }).join('<br>');
     // stagger animation
     const words = el.querySelectorAll('.word');
     const total = words.length;
@@ -211,11 +217,188 @@ function bindLondonClock(){
 }
 
 // ================================================================
+// Coffee chat — weekly slots for AI founders & builders
+// ================================================================
+const COFFEE_BOOKING_URL = ''; // e.g. 'https://cal.com/xxx' or Calendly — leave empty for email fallback
+
+function bindCoffee(){
+  const btn = document.getElementById('coffeeBook');
+  if (!btn) return;
+
+  // If a real booking page is configured, link straight to it.
+  if (COFFEE_BOOKING_URL){
+    btn.href = COFFEE_BOOKING_URL;
+    btn.target = '_blank';
+    btn.rel = 'noopener';
+    return;
+  }
+
+  const panel = document.getElementById('coffeePanel');
+  const copyBtn = document.getElementById('coffeeCopy');
+  const mailto = document.getElementById('coffeeMailto');
+  const t = k => (I18N[getLang()] && I18N[getLang()][k]) || k;
+
+  const mailtoHref = () => {
+    const lang = getLang();
+    const subject = encodeURIComponent(lang === 'zh' ? 'Coffee Chat 预约' : 'Coffee chat request');
+    const body = encodeURIComponent(lang === 'zh'
+      ? '你好 Isabella：\n\n我想预约一次 coffee chat。\n\n关于我：\n想聊的话题：\n方式（线上 / 剑桥 / 伦敦）：\n方便的时间（给 2–3 个选项）：\n'
+      : "Hi Isabella,\n\nI'd love to book a coffee chat.\n\nA bit about me:\nWhat I'd like to talk about:\nFormat (online / Cambridge / London):\nA few times that work for me:\n");
+    return `mailto:${OWNER_EMAIL}?subject=${subject}&body=${body}`;
+  };
+
+  // CTA toggles the panel — works regardless of whether a mail client is set up
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    panel.hidden = !panel.hidden;
+    if (!panel.hidden) mailto.href = mailtoHref();
+  });
+
+  // Copy the address (with a fallback for older browsers)
+  copyBtn.addEventListener('click', () => {
+    const done = () => {
+      copyBtn.textContent = t('coffee.copied');
+      setTimeout(() => { copyBtn.textContent = t('coffee.copy'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(OWNER_EMAIL).then(done).catch(done);
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = OWNER_EMAIL;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch(e){}
+      ta.remove();
+      done();
+    }
+  });
+
+  document.addEventListener('langchange', () => {
+    if (!panel.hidden) mailto.href = mailtoHref();
+  });
+}
+
+// ================================================================
+// Count-up animation for the data-scale strips
+// ================================================================
+function bindCountUp(){
+  const els = document.querySelectorAll('.case-stats');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+
+  const animate = el => {
+    if (el.dataset.counted) return;
+    el.dataset.counted = '1';
+    el.innerHTML = el.textContent.replace(/\d[\d,]*/g,
+      m => `<span class="cs-num" data-t="${m.replace(/,/g, '')}">${m}</span>`);
+    el.querySelectorAll('.cs-num').forEach(span => {
+      const target = parseInt(span.dataset.t, 10);
+      if (!isFinite(target)) return;
+      const dur = 1100;
+      const t0 = performance.now();
+      const step = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+        span.textContent = Math.round(target * eased).toLocaleString('en-US');
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  };
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){ animate(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: .4 });
+  els.forEach(el => io.observe(el));
+}
+
+// ================================================================
+// Back-to-top seal (appears after scrolling past the hero)
+// ================================================================
+function bindSealTop(){
+  const seal = document.createElement('button');
+  seal.className = 'seal-top';
+  seal.textContent = '↑';
+  seal.setAttribute('aria-label', 'Back to top');
+  document.body.appendChild(seal);
+  seal.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  let ticking = false;
+  const update = () => {
+    seal.classList.toggle('show', window.scrollY > window.innerHeight * 1.1);
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+}
+
+// ================================================================
+// Subtle 3D tilt on cards
+// ================================================================
+function bindTilt(){
+  if (window.matchMedia('(hover: none)').matches) return; // skip touch devices
+  document.querySelectorAll('.proj-card, .req-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = `perspective(900px) rotateX(${(-y * 2.4).toFixed(2)}deg) rotateY(${(x * 2.4).toFixed(2)}deg) translateY(-2px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+}
+
+// ================================================================
+// Reading progress bar
+// ================================================================
+function bindProgress(){
+  const bar = document.createElement('div');
+  bar.className = 'progress';
+  document.body.appendChild(bar);
+  let ticking = false;
+  const update = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, { passive:true });
+  update();
+}
+
+// ================================================================
+// Scrollspy — topnav highlights current section
+// ================================================================
+function bindScrollspy(){
+  const links = Array.from(document.querySelectorAll('.topnav a[href^="#"]'));
+  if (!links.length) return;
+  const map = new Map();
+  links.forEach(a => {
+    const sec = document.querySelector(a.getAttribute('href'));
+    if (sec) map.set(sec, a);
+  });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        links.forEach(a => a.classList.remove('active'));
+        const a = map.get(e.target);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  map.forEach((_, sec) => io.observe(sec));
+}
+
+// ================================================================
 // Reveal on scroll
 // ================================================================
 function bindReveal(){
   const targets = document.querySelectorAll(
-    '.chap-head, .about > *, .ink-quote, .case, .research-question, .research-meta-grid > div, .framework, .proj-card, .agent, .tool-row, .req-card'
+    '.chap-head, .about > *, .ink-quote, .case, .research-question, .research-meta-grid > div, .vwall, .rs-item, .framework, .proj-card, .agent, .tool-row, .req-card, .coffee'
   );
   targets.forEach(el => el.classList.add('reveal'));
   const io = new IntersectionObserver(entries => {
