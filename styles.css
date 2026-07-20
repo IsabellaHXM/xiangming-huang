@@ -128,35 +128,6 @@ input,textarea{font-family:inherit;font-size:15px;color:var(--ink)}
   display:flex;flex-direction:column;justify-content:center;
   overflow:hidden;
 }
-/* Hero ornament — 竖排铭牌 + 印章 */
-.hero-ornament{
-  position:absolute;
-  right:48px;top:50%;
-  transform:translateY(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:18px;
-  z-index:0;
-  pointer-events:none;user-select:none;
-}
-.ho-text{
-  writing-mode:vertical-rl;
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:.4em;
-  color:var(--ink-faint);
-  text-transform:uppercase;
-}
-.ho-line{width:1px;height:64px;background:var(--hair)}
-.ho-seal{
-  writing-mode:vertical-rl;
-  font-family:var(--serif-zh);
-  font-size:15px;font-weight:600;
-  letter-spacing:.18em;
-  color:var(--accent);
-  border:1px solid var(--accent);
-  border-radius:2px;
-  padding:9px 6px;
-  opacity:.8;
-}
 .hero-body{position:relative;z-index:1;max-width:900px}
 /* Hero headline layout when avatar present */
 .hero-headline{display:flex;align-items:center;gap:24px}
