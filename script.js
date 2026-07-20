@@ -219,17 +219,31 @@ function bindLondonClock(){
 // ================================================================
 // Coffee chat — weekly slots for AI founders & builders
 // ================================================================
-const COFFEE_BOOKING_URL = ''; // e.g. 'https://cal.com/xxx' or Calendly — leave empty for email fallback
+const COFFEE_BOOKING_URL = ''; // e.g. Microsoft 'Bookings with me' share link — leave empty for email fallback
+const COFFEE_EMBED = true;     // when a URL is set, also embed the calendar inline below the section
 
 function bindCoffee(){
   const btn = document.getElementById('coffeeBook');
   if (!btn) return;
 
-  // If a real booking page is configured, link straight to it.
+  // If a real booking page is configured, link to it — and embed it inline.
   if (COFFEE_BOOKING_URL){
     btn.href = COFFEE_BOOKING_URL;
     btn.target = '_blank';
     btn.rel = 'noopener';
+    const note = document.querySelector('.coffee-note');
+    if (note) note.hidden = true;
+    if (COFFEE_EMBED){
+      const wrap = document.getElementById('coffeeEmbed');
+      if (wrap){
+        const frame = document.createElement('iframe');
+        frame.src = COFFEE_BOOKING_URL;
+        frame.loading = 'lazy';
+        frame.title = 'Coffee chat booking calendar';
+        wrap.appendChild(frame);
+        wrap.hidden = false;
+      }
+    }
     return;
   }
 
