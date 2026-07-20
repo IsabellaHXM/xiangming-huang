@@ -219,7 +219,7 @@ function bindLondonClock(){
 // ================================================================
 // Coffee chat — weekly slots for AI founders & builders
 // ================================================================
-const COFFEE_BOOKING_URL = ''; // e.g. Microsoft 'Bookings with me' share link — leave empty for email fallback
+const COFFEE_BOOKING_URL = 'https://outlook.office.com/bookwithme/user/48a92db9fb964677abd76070224f5769@jbs.cam.ac.uk/meetingtype/7k4tdh4SaUGaf3auYefn1Q2?anonymous&ismsaljsauthenabled&ep=mcard'; // Microsoft 'Bookings with me' — leave empty for email fallback
 const COFFEE_EMBED = true;     // when a URL is set, also embed the calendar inline below the section
 
 function bindCoffee(){
