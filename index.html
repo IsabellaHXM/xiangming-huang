@@ -302,23 +302,20 @@
 <section class="chap" id="research">
   <div class="chap-head">
     <span class="chap-num">04</span>
-    <span class="chap-label" data-i18n="research.label">研究方向</span>
+    <span class="chap-label" data-i18n="research.label">研究</span>
   </div>
 
   <div class="research-main">
     <div class="research-question">
       <span class="q-tag" data-i18n="research.qtag">研究问题</span>
-      <p data-i18n="research.q">人人都在谈论的「AI-native」究竟是什么？在共享的大模型底座上，创始人如何构建公司的独特性——又如何面向不同的受众，调整自己的叙事？</p>
+      <p data-i18n="research.q">人人都在谈论的「AI-native」，究竟是什么？</p>
+      <p class="rq-sub" data-i18n="research.q2">在共享的大模型底座上，创始人如何构建独特性，又如何向不同的受众讲述它？</p>
     </div>
 
     <div class="research-meta-grid">
       <div>
         <h4 data-i18n="research.method.title">方法</h4>
-        <p data-i18n="research.method">半结构化访谈 15 位创始人（中国、北美、欧洲，种子轮至 A 轮），企业材料分析，主题编码，跨案例比较。</p>
-      </div>
-      <div>
-        <h4 data-i18n="research.scope.title">对象</h4>
-        <p data-i18n="research.scope">15+ 家 AI-native 公司——从 AI 交易、企业级 AI 员工，到 AI 宠物陪伴、AI 占卜。1,000+ 分钟创始人深度访谈，覆盖 Bootstrapped 至 A 轮，中国、美国、欧洲与香港市场。</p>
+        <p data-i18n="research.method">对 15 位 AI-native 创始人进行半结构化深度访谈，结合 pitch deck、官网与媒体报道做企业材料分析；主题编码，跨案例比较。</p>
       </div>
       <div>
         <h4 data-i18n="research.finding.title">核心发现</h4>
@@ -423,25 +420,18 @@
   <p class="chap-intro" data-i18n="agent.intro">这是一个基于我脱敏后的资料构建的对话 Agent。它可以回答关于我背景、经历和研究的问题——本身也是我 AI 产品能力的展品。</p>
 
   <div class="agent">
-    <div class="agent-window" id="agentWindow">
-      <div class="agent-msg agent-msg-bot">
-        <span data-i18n="agent.welcome">你好。你可以问我关于她的背景、案例，或者 dissertation 的问题。</span>
-      </div>
+    <!-- Dify chatbot (app: Xiangming's Agent on cloud.dify.ai) -->
+    <div class="agent-frame">
+      <iframe
+        id="agentFrame"
+        src="https://udify.app/chatbot/kz04QpOlMAESQzeP"
+        title="Xiangming's Agent"
+        loading="lazy"
+        allow="microphone">
+      </iframe>
     </div>
-    <div class="agent-suggests" id="agentSuggests">
-      <button class="sug" data-i18n="agent.q1">她适合什么岗位？</button>
-      <button class="sug" data-i18n="agent.q2">TikTok 的项目具体做了什么？</button>
-      <button class="sug" data-i18n="agent.q3">dissertation 的核心发现是什么？</button>
-      <button class="sug" data-i18n="agent.q4">她的技术栈有什么？</button>
-    </div>
-    <form class="agent-input" id="agentForm">
-      <input type="text" id="agentText" data-i18n-placeholder="agent.placeholder" placeholder="输入你的问题（中英文均可）" autocomplete="off" />
-      <button type="submit" aria-label="Send">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-    </form>
     <div class="agent-foot">
-      <span data-i18n="agent.privacy">本对话不会被存储。护栏：仅回答与专业背景相关的问题；每 IP 每小时限 20 条。</span>
+      <span data-i18n="agent.privacy">由 Dify 托管。护栏：仅回答与专业背景相关的问题，不编造数字与内部信息。</span>
     </div>
 
   </div>

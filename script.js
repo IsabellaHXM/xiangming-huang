@@ -434,6 +434,7 @@ function bindAgent(){
   const form = document.getElementById('agentForm');
   const input = document.getElementById('agentText');
   const suggests = document.getElementById('agentSuggests');
+  if (!form) return; // Agent is now a Dify iframe; legacy custom UI not present
 
   function addMessage(role, text){
     const div = document.createElement('div');

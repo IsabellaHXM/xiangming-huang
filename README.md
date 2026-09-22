@@ -27,7 +27,7 @@
 | 研究主题图（可点击展开引语） | ✅ |
 | 创始人评估四维 | ✅ |
 | 旗韵项目外链（不复述） | ✅ |
-| Personal Agent（前端 UI + Worker 代码） | ✅ 前端就绪，Worker 待部署 |
+| Personal Agent（Dify iframe 内嵌） | ✅ 已上线：cloud.dify.ai → Xiangming's Agent |
 | 隐私脱敏（无手机号、无内部数字） | ✅ |
 | 申请表单弹窗（公司 / 个人） | ✅ |
 
@@ -56,7 +56,13 @@ git push
 
 ## 待接入的两个后端（都是免费方案）
 
-### 1. Personal Agent → Cloudflare Worker
+### 1. Personal Agent
+
+**当前方案：Dify。** `index.html` 的 #agent 区块内嵌 `https://udify.app/chatbot/kz04QpOlMAESQzeP`。改 system prompt / 模型：登录 cloud.dify.ai → Studio → Xiangming's Agent → Orchestrate，改完点 Publish → Publish Update，网站无需重新部署。
+
+以下 Cloudflare Worker 方案为备用（未启用）：
+
+#### Cloudflare Worker（备用）
 
 前端已就绪。Worker 未部署前，Agent 会显示友好提示。部署步骤：
 
