@@ -182,7 +182,7 @@ const I18N_ZH = {
   'coffee.copied': '已复制 ✓',
   'coffee.tpl': '邮件请附上：你是谁 · 想聊什么 · 线上还是线下（剑桥 / 伦敦）· 2–3 个方便的时间。',
   'coffee.open': '用邮件应用打开 →',
-  'coffee.note': '暂未接入日历预约——邮件通常 24 小时内回复。',
+  'coffee.note': '发邮件到 xiangming.huang@outlook.com 约时间——通常 24 小时内回复。',
 
   'col.qiyun': '旗韵项目',
   'col.london': '目前在中国',
@@ -403,7 +403,7 @@ const I18N_EN = {
   'coffee.copied': 'Copied ✓',
   'coffee.tpl': "In your email: who you are · what you'd like to talk about · online or in person (Cambridge / London) · two or three times that work.",
   'coffee.open': 'Open in your mail app →',
-  'coffee.note': 'No calendar booking yet — I usually reply within 24 hours.',
+  'coffee.note': 'Email xiangming.huang@outlook.com to find a time — I usually reply within 24 hours.',
 
   'col.qiyun': 'Qiyun project',
   'col.london': 'Currently in China',
