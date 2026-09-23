@@ -204,12 +204,12 @@ function bindLondonClock(){
     try {
       const now = new Date();
       const s = now.toLocaleTimeString('en-GB', {
-        timeZone: 'Europe/London',
+        timeZone: 'Asia/Shanghai',
         hour: '2-digit', minute: '2-digit', hour12: false
       });
-      el.textContent = s + ' GMT';
+      el.textContent = s + ' GMT+8';
     } catch (e){
-      el.textContent = '— GMT';
+      el.textContent = '— GMT+8';
     }
   };
   tick();

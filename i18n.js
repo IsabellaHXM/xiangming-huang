@@ -185,7 +185,7 @@ const I18N_ZH = {
   'coffee.note': '暂未接入日历预约——邮件通常 24 小时内回复。',
 
   'col.qiyun': '旗韵项目',
-  'col.london': '目前在伦敦',
+  'col.london': '目前在中国',
   'col.credit': '本站由 Claude Code 构建 · 设计与文字均为原创 · © 2026 Xiangming Huang',
 
   'modal.s1.title': '你以什么身份申请？',
@@ -406,7 +406,7 @@ const I18N_EN = {
   'coffee.note': 'No calendar booking yet — I usually reply within 24 hours.',
 
   'col.qiyun': 'Qiyun project',
-  'col.london': 'Currently in London',
+  'col.london': 'Currently in China',
   'col.credit': 'Built with Claude Code · Design and writing by Xiangming Huang · © 2026 Xiangming Huang',
 
   'modal.s1.title': 'Who are you requesting as?',
